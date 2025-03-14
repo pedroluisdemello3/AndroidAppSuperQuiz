@@ -1,4 +1,4 @@
-package com.jailton.androidapptemplate
+package com.pedro.AndroidAppSuperQuiz
 
 import org.junit.Test
 
