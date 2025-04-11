@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Cadastro de Usuário"
+        android:text="@string/Cadastro_Usuario"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,8 +23,8 @@
     <EditText
         android:id="@+id/registerNameEditText"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Nome"
+        android:layout_height="@dimen/edittext_height"
+        android:hint="@string/Nome"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,8 +33,8 @@
     <EditText
         android:id="@+id/registerEmailEditText"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Email"
+        android:layout_height="@dimen/edittext_height"
+        android:hint="@string/Email_do_Usuario"
         android:inputType="textEmailAddress"
         app:layout_constraintTop_toBottomOf="@id/registerNameEditText"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,8 +43,8 @@
     <EditText
         android:id="@+id/registerPasswordEditText"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Senha"
+        android:layout_height="@dimen/edittext_height"
+        android:hint="@string/Senha_do_Usuario"
         android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@id/registerEmailEditText"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,8 +53,8 @@
     <EditText
         android:id="@+id/registerConfirmPasswordEditText"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Confirmar Senha"
+        android:layout_height="@dimen/edittext_height"
+        android:hint="@string/Confirmar_Senha_do_Usuario"
         android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@id/registerPasswordEditText"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,8 +63,8 @@
     <Button
         android:id="@+id/registerButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Cadastrar"
+        android:layout_height="@dimen/edittext_height"
+        android:text="@string/Cadastrar_Usuario"
         app:layout_constraintTop_toBottomOf="@id/registerConfirmPasswordEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -73,7 +73,7 @@
         android:id="@+id/sairButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Sair"
+        android:text="@string/Sair_Usuario"
         app:layout_constraintTop_toBottomOf="@id/registerButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
