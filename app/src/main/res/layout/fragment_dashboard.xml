@@ -20,6 +20,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/image_item"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="Store Photo"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/gallery_thumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_dashboard" />
+
+    <Button
+        android:id="@+id/button_select_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Selecionar Imagem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_item" />
+
 
     <EditText
         android:id="@+id/enderecoItemEditText"
@@ -28,7 +51,7 @@
         android:hint="Endereço"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_dashboard" />
+        app:layout_constraintTop_toBottomOf="@id/button_select_image" />
 
 
     <Button
