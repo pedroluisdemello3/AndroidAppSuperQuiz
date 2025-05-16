@@ -74,7 +74,7 @@ class DashboardFragment : Fragment() {
         auth = FirebaseAuth.getInstance()
 
         try {
-            storageReference = FirebaseStorage.getInstance().reference.child("itens_images")
+            storageReference = FirebaseStorage.getInstance().reference.child("super_quiz_images")
         } catch (e: Exception) {
             Log.e("FirebaseStorage", "Erro ao obter referência para o Firebase Storage", e)
             // Trate o erro conforme necessario, por exemplo:
