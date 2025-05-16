@@ -81,7 +81,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
-        android:id="@+id/registerButton"
+        android:id="@+id/salvarButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/Atualizar_conta"
@@ -93,8 +93,8 @@
         android:id="@+id/sairButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/finalizar"
-        app:layout_constraintTop_toBottomOf="@id/registerButton"
+        android:text="Sair"
+        app:layout_constraintTop_toBottomOf="@id/salvarButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
