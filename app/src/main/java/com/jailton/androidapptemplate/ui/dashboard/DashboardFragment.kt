@@ -133,7 +133,7 @@ class DashboardFragment : Fragment() {
                 val base64Image = Base64.encodeToString(bytes, Base64.DEFAULT)
                 val endereco = enderecoEditText.text.toString().trim()
                 //TODO("Capture aqui o conteudo que esta nos outros editTexts que foram criados")
-                
+
                 val item = Item(endereco, base64Image)
 
                 saveItemIntoDatabase(item)
