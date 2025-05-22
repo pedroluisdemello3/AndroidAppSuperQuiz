@@ -2,6 +2,7 @@ package com.jailton.androidapptemplate.ui.home
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,8 @@ import android.location.Geocoder
 import android.location.Location
 import android.os.Looper
 import androidx.core.app.ActivityCompat
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.SwitchCompat
 import com.bumptech.glide.Glide
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
@@ -79,6 +82,9 @@ class HomeFragment : Fragment() {
 
         val container = view.findViewById<LinearLayout>(R.id.itemContainer)
         carregarItensMarketplace(container)
+
+        val switch = view.findViewById<SwitchCompat>(R.id.darkModeSwitch)
+        habilitaDarkMode(switch)
 
         return view
     }
@@ -210,6 +216,26 @@ class HomeFragment : Fragment() {
                     currentAddressTextView.text = "Error: ${e.message}"
                 }
             }
+        }
+    }
+
+    fun habilitaDarkMode(switch: SwitchCompat){
+
+        val prefs = requireActivity().getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+
+        // Estado salvo
+        val darkMode = prefs.getBoolean("dark_mode", false)
+        switch.isChecked = darkMode
+        AppCompatDelegate.setDefaultNightMode(
+            if (darkMode) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+        )
+
+        // Listener de mudança
+        switch.setOnCheckedChangeListener { _, isChecked ->
+            prefs.edit().putBoolean("dark_mode", isChecked).apply()
+            AppCompatDelegate.setDefaultNightMode(
+                if (isChecked) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+            )
         }
     }
 }
