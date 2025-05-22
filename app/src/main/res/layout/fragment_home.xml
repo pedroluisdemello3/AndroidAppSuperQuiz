@@ -7,6 +7,16 @@
     tools:context=".ui.home.HomeFragment">
 
     <TextView
+        android:id="@+id/currentAddressTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/gray_700"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/text_home"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -14,9 +24,9 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:text="@string/title_itens"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/currentAddressTextView" />
 
     <ScrollView
         android:id="@+id/scrollView"
