@@ -1,5 +1,6 @@
 package com.jailton.androidapptemplate.ui.home
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,8 @@ import androidx.fragment.app.Fragment
 import android.util.Base64
 import android.widget.*
 import android.graphics.BitmapFactory
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.SwitchCompat
 import com.bumptech.glide.Glide
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -36,6 +39,9 @@ class HomeFragment : Fragment() {
 
         val container = view.findViewById<LinearLayout>(R.id.itemContainer)
         carregarItensMarketplace(container)
+
+        val switch = view.findViewById<SwitchCompat>(R.id.darkModeSwitch)
+        habilitaDarkMode(switch)
 
         return view
     }
@@ -83,5 +89,25 @@ class HomeFragment : Fragment() {
                 Toast.makeText(container.context, "Erro ao carregar dados", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    fun habilitaDarkMode(switch: SwitchCompat){
+
+        val prefs = requireActivity().getSharedPreferences("AppPrefs", Context.MODE_PRIVATE)
+
+        // Estado salvo
+        val darkMode = prefs.getBoolean("dark_mode", false)
+        switch.isChecked = darkMode
+        AppCompatDelegate.setDefaultNightMode(
+            if (darkMode) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+        )
+
+        // Listener de mudança
+        switch.setOnCheckedChangeListener { _, isChecked ->
+            prefs.edit().putBoolean("dark_mode", isChecked).apply()
+            AppCompatDelegate.setDefaultNightMode(
+                if (isChecked) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+            )
+        }
     }
 }
