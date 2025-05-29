@@ -48,6 +48,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             notificationManager.createNotificationChannel(channel)
         }
 
+        // TODO: Substituir a logica aqui
         val targetProgress = when (status) {
             "em preparo" -> 33
             "saindo para entrega" -> 66
@@ -55,6 +56,8 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             else -> 0
         }
 
+        // TODO: Substituir ícone e layout aqui, se desejar usar outro estilo para notificação de texto simples
+        // TODO: Modifique o arquivo custom_notification e defina um novo icone de notificacao
         val remoteViews = RemoteViews(packageName, R.layout.custom_notification)
         val builder = NotificationCompat.Builder(this, channelId)
             .setSmallIcon(R.drawable.ic_notifications_black_24dp)
@@ -102,6 +105,8 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         val pendingIntent = PendingIntent.getActivity(this, 0, intent,
             PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_IMMUTABLE)
 
+
+        // TODO: Substituir ícone aqui, se desejar usar outro estilo para notificação de texto simples
         val channelId = "fcm_default_channel"
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
             .setSmallIcon(R.drawable.ic_notifications_black_24dp)
