@@ -1,4 +1,4 @@
-package com.jailton.androidapptemplate.ui.firebase
+package com.pedro.AndroidAppSuperQuiz.ui.firebase
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -11,8 +11,8 @@ import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import com.jailton.androidapptemplate.MainActivity
-import com.jailton.androidapptemplate.R
+import com.pedro.AndroidAppSuperQuiz.MainActivity
+import com.pedro.AndroidAppSuperQuiz.R
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
