@@ -1,8 +1,8 @@
-package com.jailton.androidapptemplate.ui.ai
+package com.pedro.AndroidAppSuperQuiz.ui.ai
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.jailton.androidapptemplate.R
+import com.pedro.AndroidAppSuperQuiz.R
 
 class AiLogicActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

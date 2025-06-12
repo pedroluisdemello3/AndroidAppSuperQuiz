@@ -1,21 +1,19 @@
-package com.jailton.androidapptemplate.ui.ai
+package com.pedro.AndroidAppSuperQuiz.ui.ai
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.google.firebase.Firebase
 import com.google.firebase.ai.GenerativeModel
 import com.google.firebase.ai.ai
 import com.google.firebase.ai.type.GenerativeBackend
-import com.jailton.androidapptemplate.R
+import com.pedro.AndroidAppSuperQuiz.R
 import kotlinx.coroutines.launch
 
 class AiLogicFragment : Fragment() {
