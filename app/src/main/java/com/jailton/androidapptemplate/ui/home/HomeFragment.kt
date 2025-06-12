@@ -3,6 +3,7 @@ package com.jailton.androidapptemplate.ui.home
 import android.Manifest
 import android.content.pm.PackageManager
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,6 +27,7 @@ import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -34,6 +36,8 @@ import com.google.firebase.database.ValueEventListener
 import com.jailton.androidapptemplate.R
 import com.jailton.androidapptemplate.baseclasses.Item
 import com.jailton.androidapptemplate.databinding.FragmentHomeBinding
+import com.jailton.androidapptemplate.ui.ai.AiLogicActivity
+import com.jailton.androidapptemplate.ui.ai.AiLogicFragment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -85,6 +89,16 @@ class HomeFragment : Fragment() {
 
         val switch = view.findViewById<SwitchCompat>(R.id.darkModeSwitch)
         habilitaDarkMode(switch)
+
+        val fab = view.findViewById<FloatingActionButton>(R.id.fab_ai)
+        val scrollView = view.findViewById<ScrollView>(R.id.scrollView)
+        val fragmentContainer = view.findViewById<FrameLayout>(R.id.fragment_container)
+
+        fab.setOnClickListener {
+            val context = view.context
+            val intent = Intent(context, AiLogicActivity::class.java)
+            context.startActivity(intent)
+        }
 
         return view
     }
