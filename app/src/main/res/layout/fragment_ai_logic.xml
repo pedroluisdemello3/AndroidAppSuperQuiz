@@ -5,16 +5,17 @@
     android:layout_height="match_parent"
     android:padding="24dp"
     android:orientation="vertical">
-
+    <Button
+        android:id="@+id/btn_select_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecionar Imagem"
+        android:layout_marginTop="8dp" />
     <EditText
         android:id="@+id/prompt_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Digite seu prompt"
-        android:minHeight="100dp"
-        android:gravity="top"
-        android:inputType="textMultiLine"
-        android:layout_marginBottom="16dp" />
+        android:hint="Digite seu prompt" />
 
     <Button
         android:id="@+id/btn_generate"

@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/logosuperquiz_item"
+        android:id="@+id/image_item"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
@@ -41,7 +41,7 @@
         android:text="Selecionar Imagem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logosuperquiz_item" />
+        app:layout_constraintTop_toBottomOf="@id/image_item" />
 
 
     <EditText
