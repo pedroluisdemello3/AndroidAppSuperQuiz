@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:contentDescription="Abrir IA"
-        android:src="@android:drawable/bottom_bar"
+        android:src="@drawable/progress_bar_drawable"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
